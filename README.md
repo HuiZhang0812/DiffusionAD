@@ -1,3 +1,3 @@
-# DiffusionAD-Denoising-Diffusion-for-Anomaly-Detection
+# DiffusionAD: Denoising Diffusion for Anomaly Detection
 
 Coming soon
