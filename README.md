@@ -1,7 +1,7 @@
 # DiffuisonAD
 
 
-![](imgs/architecture.pdf)
+![](imgs/architecture.png)
 
 **DiffusionAD: Norm-guided One-step Denoising Diffusion for Anomaly Detection**
 
