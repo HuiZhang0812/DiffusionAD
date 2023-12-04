@@ -5,7 +5,7 @@
 
 **DiffusionAD: Norm-guided One-step Denoising Diffusion for Anomaly Detection**
 
-*Hui Zhang, Zheng Wang, Zuxuan Wu, Yu-Gang Jiang**
+*Hui Zhang, Zheng Wang, Zuxuan Wu, Yu-Gang Jiang*
 
 [Paper link](https://arxiv.org/abs/2303.08730)
 
