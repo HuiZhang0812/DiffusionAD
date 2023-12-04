@@ -1,4 +1,4 @@
-# DiffuisonAD
+# DiffusionAD
 
 
 ![](imgs/architecture.png)
