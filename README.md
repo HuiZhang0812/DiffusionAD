@@ -73,7 +73,7 @@ Visa
 
 
 ## Train
-Please specify the dataset path(MVTec-AD,VisA),anomaly_source_path(DTD), and output folder in args.json and run:
+Please specify the dataset path(MVTec-AD,VisA), anomaly_source_path(DTD), and output folder in args.json and run:
 ```bash
 python train.py
 ```
