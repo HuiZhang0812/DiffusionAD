@@ -80,7 +80,7 @@ class MVTecTrainDataset(Dataset):
         self.anomaly_source_path = args["anomaly_source_path"]
 
         self.image_paths = sorted(glob.glob(self.root_dir+"/*.png"))
-        self.anomaly_source_paths = sorted(glob.glob(self.anomaly_source_path+"/*/*.jpg"))
+        self.anomaly_source_paths = sorted(glob.glob(self.anomaly_source_path+"/images/*/*.jpg"))
 
         self.augmenters = [iaa.GammaContrast((0.5, 2.0), per_channel=True),
                            iaa.MultiplyAndAddToBrightness(
@@ -352,7 +352,7 @@ class VisATrainDataset(Dataset):
         self.resize_shape = [img_size[0], img_size[1]]
         self.anomaly_source_path = args["anomaly_source_path"]
         self.image_paths = sorted(glob.glob(self.root_dir+"/*.JPG"))
-        self.anomaly_source_paths = sorted(glob.glob(self.anomaly_source_path+"/*/*.jpg"))
+        self.anomaly_source_paths = sorted(glob.glob(self.anomaly_source_path+"/images/*/*.jpg"))
         self.augmenters = [iaa.GammaContrast((0.5, 2.0), per_channel=True),
                            iaa.MultiplyAndAddToBrightness(
                                mul=(0.8, 1.2), add=(-30, 30)),
@@ -610,7 +610,7 @@ class DAGMTrainDataset(Dataset):
         self.anomaly_source_path = args["anomaly_source_path"]
 
         self.image_paths = sorted(glob.glob(self.root_dir+"/*.PNG"))
-        self.anomaly_source_paths = sorted(glob.glob(self.anomaly_source_path+"/*/*.jpg"))
+        self.anomaly_source_paths = sorted(glob.glob(self.anomaly_source_path+"/images/*/*.jpg"))
 
         self.augmenters = [iaa.GammaContrast((0.5, 2.0), per_channel=True),
                            iaa.MultiplyAndAddToBrightness(
@@ -877,7 +877,7 @@ class MPDDTrainDataset(Dataset):
         self.anomaly_source_path = args["anomaly_source_path"]
 
         self.image_paths = sorted(glob.glob(self.root_dir+"/*.png"))
-        self.anomaly_source_paths = sorted(glob.glob(self.anomaly_source_path+"/*/*.jpg"))
+        self.anomaly_source_paths = sorted(glob.glob(self.anomaly_source_path+"/images/*/*.jpg"))
 
         self.augmenters = [iaa.GammaContrast((0.5, 2.0), per_channel=True),
                            iaa.MultiplyAndAddToBrightness(
