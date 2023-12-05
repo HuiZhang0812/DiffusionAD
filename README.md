@@ -39,7 +39,7 @@ Finally, make sure that these datasets follow the data tree.
 
 ```
 
-MVTec
+MVTec-AD
 |-- carpet
 |-----|----- thresh
 |-----|----- ground_truth
@@ -57,7 +57,7 @@ MVTec
 |-----|----- train
 |-----|--------|------ good
 
-Visa
+VisA
 |-- candle
 |-----|----- DISthresh
 |-----|----- ground_truth
