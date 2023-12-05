@@ -75,13 +75,13 @@ Visa
 ## Train
 Please specify the dataset path and output folder in args.json and run:
 ```bash
-python train.py 1
+python train.py
 ```
 
 ## Evaluation
 To perform inference with checkpoints, please run:
 ```bash
-python eval.py 1
+python eval.py
 ```
 
 ## Citation
