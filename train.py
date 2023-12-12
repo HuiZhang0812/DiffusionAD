@@ -321,7 +321,8 @@ def main():
 
         # make arg specific directories
         for i in [f'{args["output_path"]}/model/diff-params-ARGS={args["arg_num"]}/{sub_class}',
-                f'{args["output_path"]}/diffusion-training-images/ARGS={args["arg_num"]}/{sub_class}']:
+                f'{args["output_path"]}/diffusion-training-images/ARGS={args["arg_num"]}/{sub_class}',
+                 f'{args["output_path"]}/metrics/ARGS={args["arg_num"]}/{sub_class}']:
             try:
                 os.makedirs(i)
             except OSError:
