@@ -18,16 +18,16 @@
   "num_head_channels":-1,
   "noise_fn":"gauss",
   "channels":3,
-  "mvtec_root_path":"",
-  "visa_root_path":"",
-  "dagm_root_path":"",
-  "mpdd_root_path":"",
-  "anomaly_source_path":"",
+  "mvtec_root_path":"datasets/mvtec",
+  "visa_root_path":"datasets/VisA_1class/1cls",
+  "dagm_root_path":"datasets/dagm",
+  "mpdd_root_path":"datasets/mpdd",
+  "anomaly_source_path":"datasets/DTD",
   "noisier_t_range":600,
   "less_t_range":300,
   "condition_w":1,
   "eval_normal_t":200,
   "eval_noisier_t":400,
-  "output_path":""
+  "output_path":"outputs"
 
 }
