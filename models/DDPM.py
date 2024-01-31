@@ -356,7 +356,12 @@ class GaussianDiffusionModel:
         pred_x_0_noisier = self.predict_x_0_from_eps(x_noiser_t, noisier_t, estimate_noise_noisier).clamp(-1, 1)
         pred_x_t_noisier = self.sample_q(pred_x_0_noisier, normal_t, estimate_noise_normal)   
 
+        # Only calculate the noise loss of normal samples according to formula 9.
         loss = (normal_loss["loss"]+noisier_loss["loss"])[anomaly_label==0].mean()
+        # When the batch size is small, it may lead to an entire batch consisting solely of abnormal samples
+        # If they are all abnormal samples, set loss to 0.
+        if torch.isnan(loss):
+            loss.fill_(0.0)
 
         estimate_noise_hat = estimate_noise_normal - extract(self.sqrt_one_minus_alphas_cumprod, normal_t, x_normal_t.shape, x_0.device) * args["condition_w"] * (pred_x_t_noisier-x_normal_t)
         pred_x_0_norm_guided = self.predict_x_0_from_eps(x_normal_t, normal_t, estimate_noise_hat).clamp(-1, 1)
